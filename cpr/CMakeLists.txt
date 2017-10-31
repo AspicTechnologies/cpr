@@ -16,6 +16,7 @@ add_library(${CPR_LIBRARIES}
     timeout.cpp
     util.cpp
     ssl_options.cpp
+	progress_options.cpp
 
     # Header files (useful in IDEs)
     "${CPR_INCLUDE_DIRS}/cpr/api.h"
@@ -37,7 +38,8 @@ add_library(${CPR_LIBRARIES}
     "${CPR_INCLUDE_DIRS}/cpr/session.h"
     "${CPR_INCLUDE_DIRS}/cpr/timeout.h"
     "${CPR_INCLUDE_DIRS}/cpr/util.h"
-    "${CPR_INCLUDE_DIRS}/cpr/ssl_options.h")
+    "${CPR_INCLUDE_DIRS}/cpr/ssl_options.h"
+	"${CPR_INCLUDE_DIRS}/cpr/progress_options.h")
 
 message(STATUS "Using CURL_LIBRARIES: ${CURL_LIBRARIES}.")
 target_link_libraries(${CPR_LIBRARIES}
