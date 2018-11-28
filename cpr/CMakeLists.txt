@@ -1,5 +1,7 @@
 message(STATUS "Using CURL_INCLUDE_DIRS: ${CURL_INCLUDE_DIRS}.")
 
+add_definitions(-DCURL_STATICLIB)
+
 add_library(${CPR_LIBRARIES}
 
     # Source files
@@ -40,6 +42,8 @@ add_library(${CPR_LIBRARIES}
     "${CPR_INCLUDE_DIRS}/cpr/util.h"
     "${CPR_INCLUDE_DIRS}/cpr/ssl_options.h"
 	"${CPR_INCLUDE_DIRS}/cpr/progress_options.h")
+
+
 
 message(STATUS "Using CURL_LIBRARIES: ${CURL_LIBRARIES}.")
 target_link_libraries(${CPR_LIBRARIES}
